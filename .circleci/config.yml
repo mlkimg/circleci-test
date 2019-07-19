@@ -29,6 +29,7 @@ jobs:
       - run:
           name: Install Quasar CLI
           command: |
+            npm set prefix=/home/circleci/npm && echo 'export PATH=$HOME/circleci/npm/bin:$PATH' >> /home/circleci/.bashrc
             npm uninstall -g quasar-cli
       - run: yarn install
 
